@@ -1,0 +1,26 @@
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+
+        # O(m*n) time 
+        # O(m*n) space 
+        # dp = [[0 for j in range(n+1)] for _ in range(m+1)]
+        # dp[m-1][n-1] = 1
+
+        # for i in range(m-1, -1, -1):
+        #     for j in range(n-1, -1, -1):
+        #         dp[i][j] += dp[i+1][j] + dp[i][j+1]
+
+        # return dp[0][0]
+
+        # O(m*n) time 
+        # O(n) space 
+        # dp = [1] * (n)
+        # for _ in range(m-1):
+        #     for j in range(n-2, -1, -1):
+        #         dp[j] += dp[j+1]
+
+        # return dp[0]
+
+        return math.comb(m+n-2, m-1)
+
+        
